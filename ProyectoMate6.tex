@@ -1,0 +1,116 @@
+\documentclass{article}
+\newcommand\tab[1][0.5cm]{\hspace*{#1}}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+
+\usepackage{lipsum}
+\usepackage[margin=1in,left=1.5in,includefoot]{geometry}
+
+%\usepackage{graphicx}
+\usepackage{float}
+%Header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, amsbsy} % simbolitos
+\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+\rhead{\begin{picture}(0,0)
+\put(-56.7,0){\includegraphics[width=20mm]{./LogoGalileo.png}} \end{picture}}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\begin{document}
+
+\begin{center}
+\textbf{\emph{Proyecto An�lisis de Fourier \\ Por: \\ Jorge Luis Aguilar Perez - 10002188 \\ Cesar Agusto Aceytuno Sagastume - 15002140 \\ Billy Eliab Maldonado Polanco - 09000449}}
+\end{center}
+\begin{flushleft}
+\begin{enumerate}
+    \item{Marco T\'eorico} 
+    \begin{enumerate}
+    \item Series de Fourier
+    \vspace{5mm} %5mm vertical space
+    
+    Una serie de Fourier es una serie infinita que converge puntualmente a una función periódica y continua a trozos (o por partes). Las series de Fourier constituyen la herramienta matemática básica del análisis de Fourier empleado para analizar funciones periódicas a través de la descomposición de dicha función en una suma infinita de funciones sinusoidales mucho más simples es como combinación de senos y cosenos con frecuencias enteras.
+    \vspace{5mm} %5mm vertical space
+    
+    Las series de Fourier tienen la forma: 
+    
+    $$\displaystyle {a_0 \over 2}+\sum_{k=1}^{\infty} \;[a_n cos{2n\pi t\over  T} + {b_n sin{2n\pi t\over  T} ] $$
+    
+    
+ 
+\end{enumerate}
+\end{enumerate}
+
+
+
+\newpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|l|l|} \hline
+$f$ & discontinuidades de $f$ & discontinuidades de $f'$  & error (N=5)  \\ \hline
+ $(x\textsuperscript{2} - \pi\textsuperscript{2})$&  &  &   \\ \hline
+ $\mid x + 1\mid$ &  &  &   \\ \hline
+ $e\textsuperscript{-x}sign(2-x)$&  &  & \\ \hline
+ x\textsuperscript{2}&  &  & \\ \hline
+$sin(\frac{2}{\pi}x\textsuperscript{2} + \frac{\pi}{2})$ &  &  & \\ \hline
+ $x\textsuperscript{3} - \pi\textsuperscript{3}sin(\frac{x}{2})$&  &  & \\ \hline
+ $(x - \pi)sinh(x + \pi)$&  &  & \\ \hline
+$ln\textsuperscript{2}(x + 6)$ &  &  & \\ \hline
+ $cos(\frac{1}{2}(x - 1)\textsuperscript{2})$&  &  & \\ \hline
+\end{tabular}
+\end{table}
+
+
+Sobre el rectangulo \textbf{R} se considera que la densidad es 0 todo lo que este fuera de la superficie \textbf{D}. Tomaremos un punto $\mathbf{(x^{*}_{ij},y^{*}_{ij})}$ en el rectangulo pequeno $\mathbf{R_{ij}}$ como esta ilustrado en la segunda imagen de arriba	por lo que la Carga de la superficie que conforma el cuadrito $\mathbf{R_{ij}}$ es aproximadamente $\mathbf{\sigma(x^{*}_{ij},y^{*}_{ij})\Delta A}$ tal que $\mathbf{\Delta A}$ se refiere a el area del rectangulo $\mathbf{R_{ij}}$.
+por lo tanto si se suman todas las Cargas se obtiene un aproximado de la Carga total sobre la superficie \textbf{D}.
+\[Q\approx\sum_{i=1}^{k}\sum_{j=1}^{l}\sigma(x^{*}_{ij},y^{*}_{ij})\Delta A. \]
+Ahora si aumentamos el numero de rectangulos osea implisitamente disminuir la dimencion de ellos se puede obtener la carga \textbf{Q} de la superficiel \textbf{D} como el valor limite de las aproximaciones hechas
+\newline
+Es decir:
+\[Q = \lim_{k,l \to \infty}\sum_{i=1}^{k}\sum_{j=1}^{l}\sigma(x^{*}_{ij},y^{*}_{ij})\Delta A = \iint_{D}\sigma(x,y)dA. \]
+
+Por lo tanto para obtener la carga \textbf{Q} de una superficie \textbf{D} estara dada por la integral :
+
+\[Q =\iint_{D}\sigma(x,y)dA.\]
+
+\textbf{\newline Ejemplo 0:}
+\newline
+\newline
+\begin{center}
+\includegraphics{IM3} \newline
+\emph{Aqui ilustramos la region \textbf{D}, \textbf{\emph{Imagen 3.}}}
+\end{center}
+La carga esta distribuida sobre la region triangular D en la \textbf{\emph{Imagen 3}} de modo que la densidad de carga en (x,y) es $\mathbf{\sigma(x,y)=xy}$, medida en coulombs por metro cuadrado $\mathbf{(C/m^{2})}$. Determine la carga total. 
+\newline
+\newline
+\newpage
+\textbf{\emph{Sol:}}
+
+ 
+ \[ 
+\begin{split}
+Q &=\iint_{D}\sigma(x,y)dA. = \int^{1}_{0}\int_{1-x}^{1}xy \hspace{4mm} dy xy\\
+ &=\int_{0}^{1} \left[x\dfrac{y^{2}}{2}\right]_{y=1-x}^{y=1} dx = \int_{0}^{1}\dfrac{x}{2}\left[1^{2}-(1-x)^{2}\right]dx\\
+ &=\dfrac{1}{2}\int_{0}^{1}(2x^{2}-x^{3})dx = \dfrac{1}{2}\left[\dfrac{2x^{3}}{3}-\dfrac{x^{4}}{4}\right]_{0}^{1}=\dfrac{5}{24}
+\end{split}
+\]
+por lo tanto la carga total en la superficie \textbf{D} es ${\dfrac{5}{24}C}$
+\end{flushleft}
+\end{document}
